@@ -9,8 +9,8 @@ phases:
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t myimage .
+      - docker build -t 618253162746.dkr.ecr.us-west-2.amazonaws.com/kaushal:latest
   post_build:
     commands:
       - echo Pushing Docker image to ECR repository...
-      - docker push 618253162746.dkr.ecr.us-west-2.amazonaws.com/myimage:latest
+      - docker push 618253162746.dkr.ecr.us-west-2.amazonaws.com/kaushal:latest
