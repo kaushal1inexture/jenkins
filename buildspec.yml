@@ -6,8 +6,9 @@ phases:
       - echo Login into AWS ECR
       - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 618253162746.dkr.ecr.us-west-2.amazonaws.com
       - echo Installing Docker...
+      - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
       - sudo apt-get update -y
-      - sudo apt-get install -y docker.io
+      - sudo apt-get install -y docker-ce
       - sudo service docker start
   build:
     commands:
