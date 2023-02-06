@@ -12,7 +12,6 @@ phases:
   build:
     commands:
       - echo Building Docker image...
-      - sudo service docker start
       - sudo docker build .
   post_build:
     commands:
