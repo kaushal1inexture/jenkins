@@ -8,7 +8,8 @@ phases:
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t myimage .
+      - docker-compose build
+      - docker-compose up -d
   post_build:
     commands:
       - echo Pushing Docker image to ECR repository...
