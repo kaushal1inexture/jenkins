@@ -1,0 +1,7 @@
+version: '3'
+services:
+  codepipeline-app:
+    build: .
+    ports:
+      - 8181:9000
+    container_name: codepipeline_demo
